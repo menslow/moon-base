@@ -1,0 +1,84 @@
+/*
+  Mobile
+*/
+
+/* Adjustments */
+
+/* type */
+
+h1, h2, h3, h4, h5, h6	{ position: relative}
+h1, h2	{ line-height: 22px;}
+h1, h2, h3, h4	{ }
+h3, h4, h5, h6	{ line-height: 16px}
+h1	{ font-size: 18px}
+h2	{ font-size: 14px}
+h3	{ font-size: 12px}
+h4	{ font-size: 12px}
+h5	{ font-size: 12px}
+h6	{ font-size: 12px}
+
+p, pre, address	{ font-size: 12px; line-height: 16opx;}
+
+/* Header */
+
+.header_search, label.location, .search label span, .filterHolder, .no-logo, .share_this, .sort_by, .inline .in_label, .landing .sub { display: none; }
+
+.header, .landing .header { background: #35749D; }
+.hGroup { padding: 5px 0; }
+.logo { clear: left; display: block; font-size: 16px; line-height: 18px; margin-top: 0;}
+ a.logo { color: #fff; font-weight: bold; text-decoration: none; padding: 5px 0;}
+.header .menu { background: #eee; padding: 7px 0; }
+
+.search { display: none; min-width: 300px;  }
+.search label { width:78% }
+.search input.text { width: 88%; }
+.search input.btn { float: right; }
+.landing_search { width: auto; margin: 0 10px; }
+
+/* Content */
+
+.meta { margin-top: 0; }
+
+h1.search_title, .meta p { font-size: 12px; padding: 5px 0; }
+
+.links ul { display: inline; }
+
+.aGroup { margin-top: 0px; }
+
+/* Advanced */
+
+legend { width: 100%; }
+.advanced_search legend.grid_7, .advanced_search.grid_8 { margin-left: 0; margin-right: 0; }
+.advanced_search label span { float: left; }
+
+/* Landing */
+
+.landing_search { padding-left: 0; margin-top: 20px;}
+.landing_search label { width:80% }
+.landing_search label.keyword { display: inline; }
+.landing input.text { width: 90%; margin-left: 0; float: left; }
+.landing button { float: right; }
+.landing h2.tagline { font-size: 18px;}
+
+/* Grid */
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.align_center,
+.align_right {
+  text-align: left;
+}

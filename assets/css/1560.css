@@ -1,0 +1,144 @@
+/*
+  1560 Grid System - Not Used
+*/
+
+body {
+  min-width: 1560px;
+}
+
+/* `Containers
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1560px;
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* `Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+  margin-left: 0;
+}
+
+.omega {
+  margin-right: 0;
+}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_12 .grid_1 {
+  width: 110px;
+}
+
+.container_12 .grid_2 {
+  width: 240px;
+}
+
+.container_12 .grid_3 {
+  width: 370px;
+}
+
+.container_12 .grid_4 {
+  width: 500px;
+}
+
+.container_12 .grid_5 {
+  width: 630px;
+}
+
+.container_12 .grid_6 {
+  width: 760px;
+}
+
+.container_12 .grid_7 {
+  width: 890px;
+}
+
+.container_12 .grid_8 {
+  width: 1020px;
+}
+
+.container_12 .grid_9 {
+  width: 1150px;
+}
+
+.container_12 .grid_10 {
+  width: 1280px;
+}
+
+.container_12 .grid_11 {
+  width: 1410px;
+}
+
+.container_12 .grid_12 {
+  width: 1540px;
+}
+
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+
+.clearfix:before,
+.clearfix:after,
+.container_12:before,
+.container_12:after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+}
+
+.clearfix:after,
+.container_12:after {
+  clear: both;
+}
+
+/*
+  The following zoom:1 rule is specifically for IE6 + IE7.
+  Move to separate stylesheet if invalid CSS is a problem.
+*/
+
+.clearfix,
+.container_12 {
+  zoom: 1;
+}
