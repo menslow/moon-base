@@ -5,6 +5,7 @@
 */
 
 require_once('classes/moon-base.php');
+require_once('classes/widgets.php');
 MoonBase::init();
 
 
