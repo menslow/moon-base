@@ -33,9 +33,22 @@ function add_site_scripts() {
 <?php
 	
 	if (!is_admin()) {
-		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.7.min.js', array() ); // keep modernizer in header
-		wp_enqueue_script( 'jquery-cdn', 'http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js', array(), FALSE, TRUE ); // Load in footer from Google CDN
-		wp_enqueue_script( 'app', JS . '/app.js', array('jquery-cdn'), FALSE, TRUE );
+		wp_enqueue_script( 'modernizr', JS . '/modernizr-1.7.min.js', array() ); // Load modernizer in header
+		// Re-register jquery in order to load jquery from CDN
+		wp_deregister_script( 'jquery' );
+	    wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js');
+		wp_enqueue_script( 'jquery', FALSE, array(), FALSE, TRUE ); // Load in footer from Google CDN
+		if(ENVIRONMENT==='test')
+		{
+			// Un-minified app.js + separate plugin file for easier development
+			wp_enqueue_script( 'plugins', JS . '/plugins.js', array('jquery'), FALSE, TRUE ); // Load in footer
+			wp_enqueue_script( 'app', JS . '/app.js', array('jquery'), '1.02', TRUE ); // Load in footer
+		}
+		else
+		{
+			// minified app.js with plugins combined in one file.
+			wp_enqueue_script( 'app-min', JS . '/app-min.js', array('jquery'), '1.02', TRUE ); // Load in footer
+		}
 	}
 
 }
