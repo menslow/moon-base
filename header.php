@@ -23,11 +23,6 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
-	<link rel="stylesheet" media="all" href="<?php echo(get_bloginfo('template_directory')); ?>/assets/css/theme.css" />
-	<link rel="stylesheet" media="all and (min-width: 1200px)" href="<?php echo(get_bloginfo('template_directory')); ?>/assets/css/1200.css" >
-	<link rel="stylesheet" media="all and (min-width: 620px) and (max-width: 1200px)" href="<?php echo(get_bloginfo('template_directory')); ?>/assets/css/960.css" />
-	<link rel="stylesheet" media="all and (min-width: 0px) and (max-width: 620px)" href="<?php echo(get_bloginfo('template_directory')); ?>/assets/css/mobile.css" />
-	
 	<?php wp_head(); ?>
 </head>
 
