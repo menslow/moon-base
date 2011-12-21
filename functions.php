@@ -16,10 +16,12 @@ MoonBase::init();
 * @return void
 */	
 function add_site_styles(){
-	wp_enqueue_style('theme', get_bloginfo('template_directory') . '/assets/css/theme.css', array(), '1.00', 'all');
-	wp_enqueue_style('1200', get_bloginfo('template_directory') . '/assets/css/1200.css', array(), '1.00', 'all and (min-width: 1200px)');
-	wp_enqueue_style('960', get_bloginfo('template_directory') . '/assets/css/960.css', array(), '1.00', 'all and (min-width: 620px) and (max-width: 1200px)');
-	wp_enqueue_style('mobile', get_bloginfo('template_directory') . '/assets/css/mobile.css', array(), '1.00', 'all and (min-width: 0px) and (max-width: 620px)');
+	if (!is_admin()) {
+		wp_enqueue_style('theme', get_bloginfo('template_directory') . '/assets/css/theme.css', array(), '1.00', 'all');
+		wp_enqueue_style('1200', get_bloginfo('template_directory') . '/assets/css/1200.css', array(), '1.00', 'all and (min-width: 1200px)');
+		wp_enqueue_style('960', get_bloginfo('template_directory') . '/assets/css/960.css', array(), '1.00', 'all and (min-width: 620px) and (max-width: 1200px)');
+		wp_enqueue_style('mobile', get_bloginfo('template_directory') . '/assets/css/mobile.css', array(), '1.00', 'all and (min-width: 0px) and (max-width: 620px)');
+	}	
 }
 
 /**
